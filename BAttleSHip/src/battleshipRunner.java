@@ -7,9 +7,11 @@ public class battleshipRunner
 			{
 				Layout.createLayout();
 				Layout.display();
+				Layout.fillLayout();
 				greet();
+				Layout.userInput();
 			}
-
+		static String move;
 		public static void greet()
 			{
 			System.out.println("What difficultly would you like?");
@@ -33,29 +35,38 @@ public class battleshipRunner
 			{
 			System.out.println("pick spots where you would like to place your ships");
 			System.out.println("each ship takes one space (e.g. A1)");
-			Scanner userInput = new Scanner(System.in);
-			String rowImput = userInput.nextLine();
-			//rowImput = move.substring(0,1);
-			rowImput = rowImput.toUpperCase();
-			if(rowImput.equals("A1"))
-				{
-					//assign it to A1
-				}
-			else if (rowImput.equals("A2"))
-				{
-					//assign to A2
-				}
-			else if (rowImput.equals("A3"))
-				{
-					//assign to A3
-				}
-			else if (rowImput.equals("A4"))
-				{
-					//assign to A4
-				}
-			else if (rowImput.equals("A5"))
-				{
-					//assign to A5
-				}
+		
+	
 			}
-	}
+		//public static void userInput()
+			//{
+				
+		//	int row=0;
+//				Scanner userInput=new Scanner(System.in);
+	//			 move=userInput.nextLine();
+		//		switch (move.substring(0,1))
+			//	{
+				//case "a":
+		//		case "A":
+			//			{
+				//			row=0;
+					//		break;
+						//}
+//					case "b":
+	//				case "B":
+		//					{
+			//					row=1;
+				//				break;
+					//		}
+	//			case "c":
+		//		case "C":
+			//			{
+				//			row=2;
+					//		break;
+					//	}
+						
+			//	}
+
+			}	
+				
+	

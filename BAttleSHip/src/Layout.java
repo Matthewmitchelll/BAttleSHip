@@ -1,8 +1,9 @@
+import java.util.Scanner;
 
 public class Layout
 	{
 		static String [][] Layout;
-		
+		static String move;	
 		public static void createLayout()
 			{
 				
@@ -37,6 +38,52 @@ public class Layout
 			System.out.println("|       |       |       |       |       |       |");
 			System.out.println("|   5   | "  + Layout[4][0] +  "	| "  + Layout[4][1] +  "	| "  + Layout[4][2] +  "	| "  + Layout[4][3] +  "    |   "  + Layout[4][4] +  "  | ");			                                      
 			System.out.println("|_______|_______|_______|_______|_______|_______|");
-
 			}
+			
+		public static void fillLayout()
+			{
+				for(int row=0; row<5; row++)
+					{
+						for(int col=0; col<5; col++)
+							{
+								Layout[row][col]=" ";
+							}
+		
+					}
+			}	
+		public static void userInput()
+			{
+				
+			int row=0;
+				Scanner userInput=new Scanner(System.in);
+				 move=userInput.nextLine();
+				switch (move.substring(0,1))
+				{
+				case "a":
+				case "A":
+						{
+							row=0;
+							break;
+						}
+					case "b":
+					case "B":
+							{
+								row=1;
+								break;
+							}
+				case "c":
+				case "C":
+						{
+							row=2;
+							break;
+						}
+				}								
+						int col=Integer.parseInt(move.substring(1))-1;
+				Layout[row][col]="o";
+							}
+								{
+			}
+
 	}
+			
+	
