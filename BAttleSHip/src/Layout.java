@@ -39,18 +39,6 @@ public class Layout
 			System.out.println("|   5   | "  + Layout[4][0] +  "	| "  + Layout[4][1] +  "	| "  + Layout[4][2] +  "	| "  + Layout[4][3] +  "    |   "  + Layout[4][4] +  "  | ");			                                      
 			System.out.println("|_______|_______|_______|_______|_______|_______|");
 			}
-			
-		public static void fillLayout()
-			{
-				for(int row=0; row<5; row++)
-					{
-						for(int col=0; col<5; col++)
-							{
-								Layout[row][col]=" ";
-							}
-		
-					}
-			}	
 		public static void userInput()
 			{
 				
