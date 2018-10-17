@@ -8,10 +8,11 @@ public class battleshipRunner
 				Layout.createLayout();
 				Layout.display();
 				greet();
+				while(true)
+					{
 				Layout.userInput();
-				Layout.display();
 				Layout.aIMove();			
-				Layout.display();
+					}
 			}
 				public static void greet()
 			{
@@ -24,7 +25,8 @@ public class battleshipRunner
 				}
 			else if (difficulty.equals("hard"))
 				{
-					System.out.println("You have chosen hard mode");
+					System.out.println("*the right answer is easy*");
+					greet();
 				}
 			else
 				{

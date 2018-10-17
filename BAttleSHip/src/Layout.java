@@ -42,65 +42,69 @@ public class Layout
 		public static void userInput()
 			{
 				
-			int row = 0;
+			int col = 0;
 				Scanner userInput = new Scanner(System.in);
 				 move = userInput.nextLine();
-				switch (move.substring(0,1))
+				 switch (move.substring(0,1))
 				{
 				case "a":
 				case "A":
 						{
-								row = 0;
+								col = 0;
 								break;
 						}
 				case "b":
 				case "B":
 						{
-								row = 1;
+								col = 1;
 								break;
 						}
 				case "c":
 				case "C":
 						{
-								row = 2;
+								col = 2;
 								break;
 						}
 				case "d":
 				case "D":
 						{
-								row = 3;
+								col = 3;
 								break;
 						}
 				case "e":
 				case "E":
 						{
-								row = 4;
+								col = 4;
 								break;
 						}
 				}							
 						
-				int col=Integer.parseInt(move.substring(1))-1;
+				int row=Integer.parseInt(move.substring(1))-1;
 				Layout[row][col]=" []";			
-				}
+			display();	
+			}
 		public static void aIMove()
 			{
 				int row=0;
 				int col=0;
-				 row=0;
-				 col=0;
 				int randomRow=(int)(Math.random()*4);
 				int randomCol=(int)(Math.random()*4);
 				row=randomRow;
 				col=randomCol;
-				System.out.println(Layout[row][col]=="*");
-				//	{
-					//	Layout[row][col]="*";
-			//		}
-			//	else
-				//	{
-					//	aIMove();
-			//		}
-								
+				//row = 0;
+				//col = 0;
+				if(Layout[row][col].equals("  "))
+					{
+				System.out.println(Layout[row][col]=" *");
+					}
+				else
+					{
+						System.out.println("[*]");
+						System.out.println("your ship has sunk");
+						System.out.println("you lose :(");
+						System.exit(0);
+					}
+				display();
 			}
 
 			}
