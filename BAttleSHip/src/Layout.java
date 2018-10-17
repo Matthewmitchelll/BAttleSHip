@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Layout
 	{
-		static String [][] Layout;
-		static String move;	
+		static String move;
+		static String [][] Layout;	
 		public static void createLayout()
 			{
 				
@@ -42,36 +42,67 @@ public class Layout
 		public static void userInput()
 			{
 				
-			int row=0;
-				Scanner userInput=new Scanner(System.in);
-				 move=userInput.nextLine();
+			int row = 0;
+				Scanner userInput = new Scanner(System.in);
+				 move = userInput.nextLine();
 				switch (move.substring(0,1))
 				{
 				case "a":
 				case "A":
 						{
-							row=0;
-							break;
-						}
-					case "b":
-					case "B":
-							{
-								row=1;
+								row = 0;
 								break;
-							}
+						}
+				case "b":
+				case "B":
+						{
+								row = 1;
+								break;
+						}
 				case "c":
 				case "C":
 						{
-							row=2;
-							break;
+								row = 2;
+								break;
 						}
-				}								
-						int col=Integer.parseInt(move.substring(1))-1;
-				Layout[row][col]="o";
-							}
-								{
+				case "d":
+				case "D":
+						{
+								row = 3;
+								break;
+						}
+				case "e":
+				case "E":
+						{
+								row = 4;
+								break;
+						}
+				}							
+						
+				int col=Integer.parseInt(move.substring(1))-1;
+				Layout[row][col]=" []";			
+				}
+		public static void aIMove()
+			{
+				int row=0;
+				int col=0;
+				 row=0;
+				 col=0;
+				int randomRow=(int)(Math.random()*4);
+				int randomCol=(int)(Math.random()*4);
+				row=randomRow;
+				col=randomCol;
+				System.out.println(Layout[row][col]=="*");
+				//	{
+					//	Layout[row][col]="*";
+			//		}
+			//	else
+				//	{
+					//	aIMove();
+			//		}
+								
 			}
 
-	}
+			}
 			
 	
